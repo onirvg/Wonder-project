@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header wrapper">
+        <div class="header__logo-box">
+            <img src="images/Header.png " alt="logo" class="header__logo">
+        </div>
+        <ul class="header__list">
+            <li class="header__list-item">Mobile App</li>
+            <li class="header__list-item">FAQs</li>
+            <li class="header__list-item">Contact</li>
+            <li class="header__list-item">Sign Up</li>
+        </ul>
+    </header>
+
+    <main class="main wrapper">
+        <div class="main__data">
+            <h1 class="main__title">Skip The Climbing, Catch The Bus</h1>
+            <p class="main__text">We sell tickets to the best seats in the house – houses on wheels, that is! 
+        Get ready for jaw-dropping views without breaking a sweat.
+            </p>
+            <div class="main__radio-btn">
+                <div class="main__radio-box">
+                    <input type="radio" id="round-trip" name="way" value="1">
+                    <label for="round-trip">Round trip</label> 
+                </div>
+                <div class="main__radio-box">
+                    <input type="radio" id="one-way" name="way" value="0">
+                    <label for="one-way">One way</label>
+                </div>
+                
+                    <img src="images/person solid.png" alt="person" class="main__radio-person">
+                    <div class="main__radio-counter">
+                        <!-- ДОБАВИТЬ СЧЕТЧИК ПАССАЖИРОВ -->
+                    </div>
+            </div>
+            <div class="main__block">
+                <div class="main__block-box">
+                    <p class="main__block-box_header">Departure</p>
+                    <input type="text" class="main__item-input" placeholder="Your City/Station">
+                </div>
+                <div class="main__block-box">
+                    <p class="main__block-box_header">Arrival</p>
+                    <input type="text" class="main__item-input" placeholder="Where to?">
+                </div>
+                <div class="main__block-box">
+                    <p class="main__block-box_header">Pick your lucky day</p>
+                    <input type="date" class="main__item-input" placeholder="Depart">
+                </div>
+                <div class="main__block-box">
+                    <input type="date" class="main__item-input" placeholder="Arrival">
+                </div>
+            </div>
+        </div>        
+
+        
+            <img src="images/Hero.png" alt="hero" class="main__image"/>
+        
+    </main>
+</body>
+</html>

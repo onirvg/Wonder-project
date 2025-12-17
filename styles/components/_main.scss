@@ -1,0 +1,44 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 64px 64px 128px;
+    
+
+
+    
+    &__image{
+        width: 48%;
+    }
+
+    &__title{
+        width: 640px;
+        height: 192px;
+        font-size: 64px;
+        font-weight: 700;
+    }
+
+    &__text{
+        width: 604px;
+        height: 48px;
+        font-size: 16px;
+        margin: 32px 0;
+    }
+
+    &__radio-btn{
+        width: 640px;
+        height: 34px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        align-items: center;
+        padding: 3px 24px;
+    }
+
+    &__radio-person{
+        width: 18px;
+        height: 24px;
+    }
+}
