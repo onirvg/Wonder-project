@@ -13,22 +13,19 @@
     }
 
     &__title{
-        width: 640px;
-        height: 192px;
+
         font-size: 64px;
         font-weight: 700;
     }
 
     &__text{
-        width: 604px;
-        height: 48px;
+
         font-size: 16px;
         margin: 32px 0;
     }
 
-    &__radio-btn{
-        width: 640px;
-        height: 34px;
+    &__radio-btns{
+
         border-radius: 10px;
         display: flex;
         justify-content: space-between;
@@ -40,5 +37,71 @@
     &__radio-person{
         width: 18px;
         height: 24px;
+    }
+
+    &__radio-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background-color: inherit;
+    }
+    &_btn-icon{
+        width: 20px;
+        height: 20px;
+    }
+    &__radio-counter{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+    &__counter{
+        font-weight: 500;
+        text-align: center;
+        width: 20px;
+
+    }
+    &__block{
+        display: flex;
+        flex-wrap: wrap;
+        
+        gap: 24px 32px;
+        padding-top: 24px;
+    }
+    &__block-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 16px;
+        width: calc(50% - 16px);
+        box-sizing: border-box;
+        
+        &_header{
+            font-weight: bold;
+        }
+    }
+    &__item-input{
+        display: flex;
+        align-items: center;
+        padding: 16px 24px;
+        height: 53px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 1);
+        border: none;
+        color: rgba(144, 163, 191, 1);
+        font-weight: 500;
+        gap: 12px; 
+;
+    }
+    &__btn{
+        background-color:#0578FF;
+        width: 100%;
+        padding: 16px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        
     }
 }

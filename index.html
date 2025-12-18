@@ -24,11 +24,13 @@
 
     <main class="main wrapper">
         <div class="main__data">
+            <!-- ДОБАВИТЬ СКРИПТЫ РАДИОКНОПОК
+             ПРИ ВАНВЭЙ ПОЛЕ С КОНЕЧНОЙ ДАТОЙ НЕ АКТИВНО-->
             <h1 class="main__title">Skip The Climbing, Catch The Bus</h1>
             <p class="main__text">We sell tickets to the best seats in the house – houses on wheels, that is! 
         Get ready for jaw-dropping views without breaking a sweat.
             </p>
-            <div class="main__radio-btn">
+            <div class="main__radio-btns">
                 <div class="main__radio-box">
                     <input type="radio" id="round-trip" name="way" value="1">
                     <label for="round-trip">Round trip</label> 
@@ -38,9 +40,18 @@
                     <label for="one-way">One way</label>
                 </div>
                 
-                    <img src="images/person solid.png" alt="person" class="main__radio-person">
+                   
                     <div class="main__radio-counter">
-                        <!-- ДОБАВИТЬ СЧЕТЧИК ПАССАЖИРОВ -->
+                        <img src="images/person solid.png" alt="person" class="main__radio-person">
+                        
+                         <button class="main__radio-btn" id="minus_btn">
+                            <img src="images/Minus.png" alt="Minus" class="main_btn-icon">
+                        </button>
+                        
+                        <span class="main__counter">1</span>
+                        <button class="main__radio-btn" id="plus_btn">
+                            <img src="images/Plus.png" alt="Plus" class="main_btn-icon">
+                        </button>
                     </div>
             </div>
             <div class="main__block">
@@ -59,6 +70,7 @@
                 <div class="main__block-box">
                     <input type="date" class="main__item-input" placeholder="Arrival">
                 </div>
+                <button class="main__btn">Find My Alpine Ride</button>
             </div>
         </div>        
 
@@ -66,5 +78,58 @@
             <img src="images/Hero.png" alt="hero" class="main__image"/>
         
     </main>
+
+    <div class="achievement wrapper">
+        <div class="achievement__item">
+          <span class="achievement__item-number">68k+</span>
+          <span class="achievement__item-text">Track kilometers</span>
+        </div>
+        <div class="achievement__item">
+          <span class="achievement__item-number">1.4M+</span>
+          <span class="achievement__item-text">Photos Taken</span>
+        </div>
+        <div class="achievement__item">
+          <span class="achievement__item-number">23M+</span>
+          <span class="achievement__item-text">Altitude Gained</span>
+        </div>
+        <div class="achievement__item">
+          <span class="achievement__item-number">165+</span>
+          <span class="achievement__item-text">Years of history</span>
+        </div>
+    </div>
+
+    <div class="gallery wrapper">
+        <p class="gallery__header">
+            Glimpses of Glory
+        </p>
+        <div class="gallery__main">
+            <div class="gallery__left-side">
+                <img src="images/left_sidetop.png" alt="image" class="gallery__image-left-top">
+                <img src="images/left_sidebot.png" alt="image"class="gallery__image-left-bottom">
+            </div>
+            <div class="gallery__right-side">
+                <div class="gallery__right-side_top">
+                    <img src="images/right_side1.png" alt="image" class="gallery__image-top-left">
+                    <img src="images/right_side2.png" alt="image" class="gallery__image-top-right">
+                </div>
+                <img src="images/right_side3.png" alt="image">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="download wrapper">
+        <p class="download__header">
+            Free downloads app now!
+        </p>
+    <div class="download__apps">
+        <img src="images/as.png" alt="appstore">
+        <img src="images/hs.png" alt="huawei">
+        <img src="images/gp.png" alt="googleplay">
+    </div>
+    </div>
+
+    <!-- ДОБАВИТЬ ВЫПАДАЮЩЕЕ МЕНЮ СКРИПТ УЖЕ ГОТОВ -->
+    <script src="scripts/main_counter.js"></script>
 </body>
 </html>

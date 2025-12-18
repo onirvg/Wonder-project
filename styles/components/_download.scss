@@ -1,0 +1,27 @@
+.download{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFC501;
+    padding: 128px 0 116px;
+    align-items: center;
+    gap: 60px;
+
+    &__header{
+       font-weight: 700;
+       font-size: 62px;
+
+    }
+
+    &__apps{
+        display: flex;
+       
+        justify-content: center;
+        align-items: center;
+        gap: 125px;
+        
+        img{
+        width: 15%;
+    }
+}
+
+}
