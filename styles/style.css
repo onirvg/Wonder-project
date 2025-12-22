@@ -3,6 +3,7 @@
   justify-content: space-between;
   padding: 32px 64px;
   height: 116px;
+  align-items: center;
 }
 .header__list {
   display: flex;
@@ -21,7 +22,20 @@
 .header__logo {
   height: 50px;
 }
+.header__burger-menu {
+  display: none;
+  width: 30px;
+  height: 24px;
+}
 
+@media (max-width: 768px) {
+  .header__list {
+    display: none;
+  }
+  .header__burger-menu {
+    display: block;
+  }
+}
 * {
   padding: 0;
   margin: 0;
