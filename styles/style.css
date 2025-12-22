@@ -134,6 +134,11 @@
   border-radius: 10px;
 }
 
+.back-day:disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
 .achievement {
   display: flex;
   align-items: center;
@@ -230,6 +235,13 @@
 .faq__item:not(:last-of-type) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.503);
 }
+.faq__answer {
+  line-height: 0;
+  transition: line-height 0.5s;
+}
+.faq__answer p {
+  overflow: hidden;
+}
 .faq__question-box {
   display: flex;
   justify-content: space-between;
@@ -240,6 +252,18 @@
 .faq__answer {
   font-size: 16px;
   padding: 16px 0;
+}
+.faq_btn {
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+}
+.faq_btn img {
+  width: 13px;
+  height: 13px;
+}
+.faq_btn.active ~ faq__answer {
+  line-height: 1.2;
 }
 
 .footer {

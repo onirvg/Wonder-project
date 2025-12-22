@@ -10,6 +10,15 @@
     &__item:not(:last-of-type){
         border-bottom: 1px solid rgba(0, 0, 0, 0.503);
     }
+    
+    &__answer{
+        line-height: 0;
+        transition: line-height 0.5s;
+        
+        p{
+            overflow: hidden;
+        }
+    }
 
     &__question-box{
         display: flex;
@@ -22,5 +31,20 @@
     &__answer{
         font-size: 16px;
         padding: 16px 0;
+    }
+
+    &_btn{
+        border: none;
+        background-color: transparent;
+        padding: 5px;
+
+        img{
+            width: 13px;
+            height: 13px;
+        }
+    }
+
+    &_btn.active ~ faq__answer{
+        line-height: 1.2;
     }
 }
