@@ -25,3 +25,24 @@
 }
 
 }
+
+@media (max-width: 768px) {
+    
+    .download{
+       
+        gap: 32px;
+
+            &__header{
+        font-size: 40px;
+    }
+    &__apps{
+        flex-wrap: wrap;
+        gap: 60px;
+        
+        img{
+        width: 30%;
+    }
+
+    }
+}
+}

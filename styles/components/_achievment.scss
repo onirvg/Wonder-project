@@ -22,3 +22,15 @@
     }
 
 }
+
+@media (max-width: 768px) {
+    .achievement{
+        padding: 64px 128px;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        &__item{
+            width: calc(50% - 20px);
+        }
+    }
+}

@@ -27,8 +27,21 @@
   width: 30px;
   height: 24px;
 }
+.header__menu {
+  width: 200px;
+  background-color: #0578FF;
+  position: absolute;
+  right: 0;
+  top: 32px;
+  color: white;
+  height: 0;
+  overflow: hidden;
+}
 
 @media (max-width: 768px) {
+  .header {
+    padding: 32px;
+  }
   .header__list {
     display: none;
   }
@@ -139,6 +152,14 @@
   cursor: not-allowed;
 }
 
+@media (max-width: 768px) {
+  .main {
+    padding: 64px 32px 128px;
+  }
+  .main__image {
+    display: none;
+  }
+}
 .achievement {
   display: flex;
   align-items: center;
@@ -160,6 +181,16 @@
   font-size: 20px;
 }
 
+@media (max-width: 768px) {
+  .achievement {
+    padding: 64px 128px;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .achievement__item {
+    width: calc(50% - 20px);
+  }
+}
 .gallery {
   padding: 128px 64px;
   background-color: #DFEDFE;
@@ -202,6 +233,21 @@
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .gallery {
+    padding: 128px 32px;
+  }
+  .gallery__main {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .gallery__left-side {
+    width: 100%;
+  }
+  .gallery__right-side {
+    width: 100%;
+  }
+}
 .download {
   display: flex;
   flex-direction: column;
@@ -224,6 +270,21 @@
   width: 15%;
 }
 
+@media (max-width: 768px) {
+  .download {
+    gap: 32px;
+  }
+  .download__header {
+    font-size: 40px;
+  }
+  .download__apps {
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+  .download__apps img {
+    width: 30%;
+  }
+}
 .faq {
   padding: 128px 177px 249px;
 }
@@ -266,6 +327,11 @@
   line-height: 1.2;
 }
 
+@media (max-width: 768px) {
+  .faq {
+    padding: 128px 32px 249px;
+  }
+}
 .footer {
   background-color: #0578FF;
   color: white;
@@ -308,11 +374,11 @@
 }
 
 .contacts {
-  padding: 60px;
+  padding: 60px 0;
   text-align: center;
   background-color: white;
   color: black;
-  width: 50%;
+  width: 45%;
   border-radius: 16px;
   margin-top: -120px;
   height: max-content;
@@ -339,6 +405,22 @@
   width: 40%;
 }
 
+@media (max-width: 768px) {
+  .contacts {
+    width: 70%;
+  }
+  .footer__bottom-box {
+    padding: 64px 32px 0;
+    display: block;
+  }
+  .footer__logo {
+    height: 51px;
+    margin-bottom: 40px;
+  }
+  .footer__date {
+    padding: 40px 32px 59px;
+  }
+}
 .wrapper {
   max-width: 1440px;
   width: 100%;

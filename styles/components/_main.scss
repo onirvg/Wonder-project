@@ -109,3 +109,13 @@
     background-color: #eee;
     cursor: not-allowed;
 }
+
+@media (max-width: 768px) {
+    .main{
+        padding: 64px 32px 128px;
+
+        &__image{
+            display: none;
+        }
+    }
+}

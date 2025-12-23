@@ -50,11 +50,11 @@
 }
 
 .contacts{
-    padding: 60px;
+    padding: 60px 0;
     text-align: center;
     background-color: white;
     color: black;
-    width: 50%;
+    width: 45%;
     border-radius: 16px;
     margin-top: -120px;
     height: max-content;
@@ -83,4 +83,33 @@
         font-size: 18px;
         width: 40%;
     }
+}
+
+@media (max-width: 768px) {
+   .contacts{
+  
+    width: 70%;
+   }
+
+   .footer{
+    
+    &__bottom-box{
+        padding: 64px 32px 0;
+        display: block;
+       
+    }
+
+    &__logo{
+        height: 51px;
+        margin-bottom: 40px;
+    }
+    
+  
+
+    &__date{
+        padding: 40px 32px 59px;
+    }
+   
+}
+
 }
