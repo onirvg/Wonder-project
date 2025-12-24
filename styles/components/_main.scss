@@ -119,3 +119,17 @@
         }
     }
 }
+
+@media (max-width: 430px) {
+    .main{
+        padding: 24px 20px;
+
+        &__title{
+           font-size: 32px;
+        }
+
+         &__block-box{
+            width: 100%;
+         }
+    }
+}
