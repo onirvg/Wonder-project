@@ -103,10 +103,10 @@ function paintDay(day){
       let first = allDays.indexOf(clickedDays[0])
       let last = allDays.indexOf(clickedDays[1])
       beetweenDays = allDays.slice(first+1, last)
-      beetweenDays.forEach(item => item.style.backgroundColor = 'pink')
+      beetweenDays.forEach(item => item.style.backgroundColor = '#e8e8e8');
     }
 
-    day.style.backgroundColor = 'red'
+    day.style.backgroundColor = 'rgba(5, 120, 255, 1)'
     counterClick+=1
 }
 
