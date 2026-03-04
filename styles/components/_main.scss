@@ -105,6 +105,10 @@
         
     }
 }
+
+.hidden {
+  display: none;
+}
 .back-day:disabled{
     background-color: #eee;
     cursor: not-allowed;
