@@ -152,6 +152,32 @@
   border-radius: 10px;
 }
 
+li {
+  padding: 12px 22px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+#list {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  padding: 14px 0;
+  background: #f2f2f2;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 50;
+}
+
+.hidden {
+  display: none;
+}
+
 .back-day:disabled {
   background-color: #eee;
   cursor: not-allowed;
@@ -380,11 +406,12 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.503);
 }
 .faq__answer {
-  line-height: 0;
-  transition: line-height 0.5s;
-}
-.faq__answer p {
+  height: 0;
   overflow: hidden;
+}
+.faq__answer--visible {
+  padding: 16px 0;
+  height: max-content;
 }
 .faq__question-box {
   display: flex;
@@ -395,7 +422,6 @@
 }
 .faq__answer {
   font-size: 16px;
-  padding: 16px 0;
 }
 .faq_btn {
   border: none;
@@ -405,9 +431,6 @@
 .faq_btn img {
   width: 13px;
   height: 13px;
-}
-.faq_btn.active ~ faq__answer {
-  line-height: 1.2;
 }
 
 @media (max-width: 768px) {
@@ -527,6 +550,196 @@
   }
   .footer__date {
     padding: 40px 20px 64px;
+  }
+}
+.calendar {
+  top: 120%;
+  left: 0;
+  width: 760px;
+  padding: 24px 32px 20px;
+  background: #f5f5f5;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+  display: none;
+  z-index: 100;
+}
+
+.daysTitle {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 12px;
+  color: #9a9a9a;
+  margin-bottom: 10px;
+}
+
+.main__block-box {
+  position: relative;
+}
+
+.calendar > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#prev,
+#next {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #777;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+#prev:hover,
+#next:hover {
+  color: #000;
+}
+
+#month-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.month {
+  width: 100%;
+}
+
+.month-title {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 14px;
+  color: #2b2b2b;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 14px;
+  font-size: 13px;
+  text-align: center;
+  color: #2b2b2b;
+}
+
+.day-title {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.calendar > div:last-child {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+#reset {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+#reset:hover {
+  color: #000;
+}
+
+#apply {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+#apply:hover {
+  background: #1664c1;
+  box-shadow: 0 4px 10px rgba(26, 115, 232, 0.35);
+}
+
+.calendar.active {
+  display: block;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.day.range-start,
+.day.range-end {
+  background: #1a73e8;
+  color: #fff;
+}
+
+.day.in-range {
+  background: #e8e8e8;
+  border-radius: 0;
+}
+
+@media (max-width: 430px) {
+  .calendar {
+    width: 92%;
+    max-width: 420px;
+    height: auto;
+    background: #f3f3f3;
+    border-radius: 18px;
+    padding: 22px 18px 24px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+  }
+  #month-box {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .month-title {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+  .weekdays {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+  .days {
+    row-gap: 12px;
+  }
+  .day {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+  .calendar > div:first-child {
+    margin-bottom: 20px;
+  }
+  .calendar > div:last-child {
+    margin-top: 28px;
+    justify-content: space-between;
+  }
+  #apply {
+    padding: 10px 22px;
+    border-radius: 12px;
   }
 }
 .wrapper {

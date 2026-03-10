@@ -57,7 +57,7 @@
                             <img src="images/Minus.png" alt="Minus" class="main_btn-icon">
                         </button>
                         
-                        <span class="main__counter">1</span>
+                        <span class="main__counter" id="passenger-count">1</span>
                         <button class="main__radio-btn" id="plus_btn">
                             <img src="images/Plus.png" alt="Plus" class="main_btn-icon">
                         </button>
@@ -66,7 +66,10 @@
             <div class="main__block">
                 <div class="main__block-box">
                     <p class="main__block-box_header">Departure</p>
-                    <input type="text" class="main__item-input" placeholder="Your City/Station">
+                <div>
+                   <input class="main__item-input" placeholder="Your City/Station"  id="city-input" autocomplete="off">
+                 </div>
+                 <ul id="list" ></ul>
                 </div>
                 <div class="main__block-box">
                     <p class="main__block-box_header">Arrival</p>
@@ -74,11 +77,37 @@
                 </div>
                 <div class="main__block-box">
                     <p class="main__block-box_header">Pick your lucky day</p>
-                    <input type="date" class="main__item-input" placeholder="Depart">
+                    <div class="main__item-input">
+                   <img src="./images/calendar.png" alt="calendar" width="16" id="hide"/>
+                  <span id="depart">Depart</span>
+                 </div>
                 </div>
                 <div class="main__block-box">
-                    <input type="date" class="main__item-input back-day" placeholder="Arrival">
+                  <div class="main__item-input back-day" id="back-day">
+                  <img src="./images/calendar.png" alt="calendar" width="16" id="hide"/>
+                  <span id="return">Return</span>
+                 </div>
                 </div>
+                    <div class="calendar" id="calendar">
+                 <div>
+                   <button type="button" id="prev" >
+                    <img src="/images/Icon.png">
+                   </button>
+                   <button type="button" id="next">
+                   <img src="images/Icon_r.png">
+                   </button>
+                 </div>
+
+                 <div class="month-box" id="month-box"></div> 
+
+                  <div>
+                   <button type="button" id="reset">reset</button>
+                   <button type="button" id="apply">apply</button>
+                 </div>
+               </div>
+
+
+
                 <button class="main__btn">Find My Alpine Ride</button>
             </div>
         </div>        
@@ -254,9 +283,12 @@
             <p>All Rights Reserved (Especially the Window Seats).</p>
         </div>
     </footer>
-    <!-- ДОБАВИТЬ ВЫПАДАЮЩЕЕ МЕНЮ СКРИПТ УЖЕ ГОТОВ -->
-    <script src="scripts/main_counter.js"></script>
-    <script src="scripts/radio_disable.js"></script>
-    <script src="scripts/btns_faq.js"></script>
+
+    <!-- пришлось закомментить из-за csp и импорта скриптов, переписать предыдущие скрипты по новой и бахнуть в один файл -->
+    
+    <!-- <script src="scripts/modules/main_counter.js"></script>
+    <script src="scripts/modules/radio_disable.js"></script> -->
+    <script type="module" src="/scripts/script.js"></script>
+
 </body>
 </html>
